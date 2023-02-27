@@ -3,10 +3,38 @@
     font-size: 48px;
     margin-bottom: 10px;
 }
+.sub-title{
+    margin:0px auto;
+    width: 600px;
+    font-size: 20px;
+    line-height: 22px;
+}
 .card-container{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
     padding: 10px;
     margin: 45px 50px;
+}
+
+@media screen and (max-width:992px) {
+    .card-container{
+        grid-template-columns: auto auto;
+        margin: 40px;
+    }
+}
+@media screen and (max-width:662px) {
+    .card-container{
+        grid-template-columns: auto;
+        margin: 40px auto;
+    }
+    .sub-title{
+        margin:'0px 20px';
+        width: 100%;
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .title{
+        font-size: 30px;
+    }
 }

@@ -4,11 +4,13 @@
     background-image: url('');
     position: relative;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 .name-title{
     font-size: 24px;
     margin: 5px 0 4px 0;
 }
+
 .card-details{
     text-align: left;
     position: absolute;
@@ -17,8 +19,8 @@
     background-color:white;
     right: 0;
     height: 170px;
-    border-top: 2px solid red;
     clip-path: polygon(10% 3%, 100% 41%, 100% 100%, 0% 100%);
+    border-radius:5px;
     padding: 20px 47px;
     overflow: hidden;
     transition: all .3s ease-in-out;
@@ -34,6 +36,7 @@
     border-top-left-radius: 10px;
     transition:all .5s ease-in-out;
     border-radius: 2px solid red;
+    clip-path: ellipse(200px 45px at 210px);
 }
 
 .btn{
@@ -51,11 +54,21 @@
     transition: all .4s ease-in-out;
 }
 .card:hover .btn{
-    bottom: 0;
+    bottom: 8px;
     left: 10;
     right: 10;
 }
 
 .card:hover .card-details{
     height: 200px;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width:662px){
+    .card{
+        margin-bottom: 10px;
+    }
 }
