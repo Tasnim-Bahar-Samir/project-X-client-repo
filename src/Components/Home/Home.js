@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <div>
         <h1 className="title">We are Offering Best Features</h1>
-        <h4 style={{fontSize:'20px',width:'517px',margin:'0px auto'}}>
+        <h4 style={{fontSize:'20px',width:'600px',margin:'0px auto',lineHeight:'22px'}}>
           BlueLight Health Envisions a World Where Living a Healthy Lifestyle
           Comes Naturally. You, as Part of Bluelight
         </h4>

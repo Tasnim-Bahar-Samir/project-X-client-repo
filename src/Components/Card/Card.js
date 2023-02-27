@@ -9,8 +9,9 @@ const Card = ({card}) => {
     <div className='card' style={{ backgroundImage:`url(${img})`}}>
       <div className='card-details'>
         <img src={logo} alt="" />
-        <h3>{name}</h3>
+        <h3 className='name-title'>{name}</h3>
         <p>{details}</p>
+        <button className='btn'>View Details</button>
       </div>
     </div>
   )
