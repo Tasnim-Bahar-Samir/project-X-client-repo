@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import Loader from "../Loader/Loader";
 import './Home.css'
 const Home = () => {
+    const [loader,sertLoader] = useState(false)
     const [CardData, setCardData] = useState([])
     useEffect(()=>{
+        sertLoader(true)
         fetch('https://task-server-tau.vercel.app/data')
         .then(res=> res.json())
-        .then(data => setCardData(data.data))
+        .then(data => {
+            setCardData(data.data)
+            sertLoader(false)
+        })
     },[])
     console.log(CardData)
   return (
@@ -18,11 +24,17 @@ const Home = () => {
           Comes Naturally. You, as Part of Bluelight
         </h4>
       </div>
-      <div className="card-container">
+      {
+        loader? <div>
+            <Loader/>
+        </div>
+        :
+        <div className="card-container">
         {
             CardData.map(card => <Card key={card._id} card={card}/>)
         }
       </div>
+      }
     </div>
   );
 };
